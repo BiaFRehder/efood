@@ -4,6 +4,7 @@ import { colors } from '../../styles'
 export const Header = styled.header`
   height: 384px;
   position: relative;
+  padding: 40px 0;
 `
 
 export const HeaderContainer = styled.div`
@@ -14,7 +15,6 @@ export const HeaderContainer = styled.div`
 export const Logo = styled.img`
   display: flex;
   width: 125px;
-  padding-top: 40px;
 `
 
 export const Title = styled.h1`
@@ -23,7 +23,6 @@ export const Title = styled.h1`
   color: ${colors.laranja};
   text-align: center;
   max-width: 544px;
-  padding-bottom: 40px;
   position: absolute;
-  bottom: 0;
+  bottom: 40px;
 `

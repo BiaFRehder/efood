@@ -1,7 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const colors = {
-  laranja: '#E66767'
+  laranja: '#E66767',
+  fundoBody: '#FFF8F2',
+  bege: '#FFEBD9',
+  branca: '#ffffff'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -11,6 +14,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     list-style: none;
     font-family: Roboto, sans-serif;
+  }
+
+  body {
+    background-color: ${colors.fundoBody};
   }
 
   .container {
