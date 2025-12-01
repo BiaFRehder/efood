@@ -4,6 +4,7 @@ import Header from '../../components/Header'
 
 import japonesa from '../../assets/images/japonesa.png'
 import italiana from '../../assets/images/italiana.png'
+import Footer from '../../components/Footer'
 
 const resturants: Restaurant[] = [
   {
@@ -73,6 +74,7 @@ const Home = () => {
     <>
       <Header />
       <CardList restaurants={resturants} />
+      <Footer />
     </>
   )
 }

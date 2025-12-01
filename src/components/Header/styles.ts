@@ -12,11 +12,6 @@ export const HeaderContainer = styled.div`
   justify-items: center;
 `
 
-export const Logo = styled.img`
-  display: flex;
-  width: 125px;
-`
-
 export const Title = styled.h1`
   font-size: 36px;
   font-weight: bold;

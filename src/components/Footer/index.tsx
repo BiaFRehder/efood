@@ -1,0 +1,39 @@
+import instagram from '../../assets/images/instagram.png'
+import facebook from '../../assets/images/facebook.png'
+import twitter from '../../assets/images/twitter.png'
+import Logo from '../Logo'
+import { FooterContainer, ListSocialMedia, Text } from './styles'
+
+const Footer = () => {
+  return (
+    <FooterContainer>
+      <div className="container">
+        <Logo />
+        <ListSocialMedia>
+          <li>
+            <a href="#">
+              <img src={instagram} alt="Instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src={facebook} alt="Facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src={twitter} alt="Twitter" />
+            </a>
+          </li>
+        </ListSocialMedia>
+        <Text>
+          A efood é uma plataforma para divulgação de estabelecimentos, a
+          responsabilidade pela entrega, qualidade dos produtos é toda do
+          estabelecimento contratado.{' '}
+        </Text>
+      </div>
+    </FooterContainer>
+  )
+}
+
+export default Footer
