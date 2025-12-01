@@ -13,6 +13,7 @@ const CardList = ({ restaurants }: Props) => {
         {restaurants.map((restaurant) => (
           <Card
             key={restaurant.id}
+            type={restaurant.type}
             image={restaurant.image}
             altImage={restaurant.altImage}
             name={restaurant.name}

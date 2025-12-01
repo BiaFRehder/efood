@@ -9,6 +9,7 @@ import Footer from '../../components/Footer'
 const resturants: Restaurant[] = [
   {
     id: 1,
+    type: 'restaurant',
     image: japonesa,
     altImage: 'Foto de comida japonesa',
     name: 'Hioki Sushi',
@@ -19,6 +20,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 2,
+    type: 'restaurant',
     image: italiana,
     altImage: 'Foto de comida italiana',
     name: 'La Dolce Vita Trattoria',
@@ -29,6 +31,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 3,
+    type: 'restaurant',
     image: japonesa,
     altImage: 'Foto de comida japonesa',
     name: 'Hioki Sushi',
@@ -39,6 +42,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 4,
+    type: 'restaurant',
     image: italiana,
     altImage: 'Foto de comida italiana',
     name: 'La Dolce Vita Trattoria',
@@ -49,6 +53,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 5,
+    type: 'restaurant',
     image: japonesa,
     altImage: 'Foto de comida japonesa',
     name: 'Hioki Sushi',
@@ -59,6 +64,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 6,
+    type: 'restaurant',
     image: italiana,
     altImage: 'Foto de comida italiana',
     name: 'La Dolce Vita Trattoria',

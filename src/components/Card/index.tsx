@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
   Description,
   CardImage,
@@ -11,7 +12,8 @@ import estrela from '../../assets/images/estrela.png'
 import Tag from '../Tag'
 import Button from '../Button'
 
-type Props = {
+export type Props = {
+  type: string
   image: string
   altImage: string
   rating: string
@@ -21,6 +23,7 @@ type Props = {
 }
 
 const Card = ({
+  type,
   image,
   altImage,
   rating,
@@ -28,22 +31,37 @@ const Card = ({
   description,
   category
 }: Props) => {
+  if (type === 'restaurant') {
+    return (
+      <CardStyle $type="restaurant">
+        <CardImage src={image} alt={altImage} />
+        <Tags>
+          {category.map((tag) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
+        </Tags>
+        <CardContainer>
+          <Title>{name}</Title>
+          <div>
+            <p>{rating}</p>
+            <img src={estrela} alt="" />
+          </div>
+          <Description>{description}</Description>
+          <Link to="/la-dolce-vitta-trattoria">
+            <Button>Saiba mais</Button>
+          </Link>
+        </CardContainer>
+      </CardStyle>
+    )
+  }
+
   return (
-    <CardStyle>
+    <CardStyle $type="menu">
       <CardImage src={image} alt={altImage} />
-      <Tags>
-        {category.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
-        ))}
-      </Tags>
       <CardContainer>
         <Title>{name}</Title>
-        <div>
-          <p>{rating}</p>
-          <img src={estrela} alt="" />
-        </div>
         <Description>{description}</Description>
-        <Button>Saiba mais</Button>
+        <Button>Adicionar ao carrinho</Button>
       </CardContainer>
     </CardStyle>
   )

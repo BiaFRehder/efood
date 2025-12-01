@@ -5,11 +5,14 @@ export const Header = styled.header`
   height: 384px;
   position: relative;
   padding: 40px 0;
-`
 
-export const HeaderContainer = styled.div`
-  display: block;
-  justify-items: center;
+  a {
+    display: block;
+  }
+
+  div {
+    justify-items: center;
+  }
 `
 
 export const Title = styled.h1`

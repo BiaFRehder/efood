@@ -1,5 +1,6 @@
 class Restaurant {
   id: number
+  type: string
   image: string
   altImage: string
   name: string
@@ -9,6 +10,7 @@ class Restaurant {
 
   constructor(
     id: number,
+    type: string,
     image: string,
     altImage: string,
     name: string,
@@ -17,6 +19,7 @@ class Restaurant {
     description: string
   ) {
     this.id = id
+    this.type = type
     this.image = image
     this.altImage = altImage
     this.name = name
