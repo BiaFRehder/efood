@@ -47,7 +47,7 @@ const Card = ({
             <img src={estrela} alt="" />
           </div>
           <Description>{description}</Description>
-          <Link to="/la-dolce-vitta-trattoria">
+          <Link to="/la-dolce-vita-trattoria">
             <Button>Saiba mais</Button>
           </Link>
         </CardContainer>

@@ -4,7 +4,8 @@ export const colors = {
   laranja: '#E66767',
   fundoBody: '#FFF8F2',
   bege: '#FFEBD9',
-  branca: '#ffffff'
+  branca: '#ffffff',
+  pretoOpaco: '#00000080'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -14,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     list-style: none;
     font-family: Roboto, sans-serif;
+    text-decoration: none;
   }
 
   body {

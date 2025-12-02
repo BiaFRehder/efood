@@ -78,7 +78,7 @@ const resturants: Restaurant[] = [
 const Home = () => {
   return (
     <>
-      <Header />
+      <Header page="home" />
       <CardList restaurants={resturants} />
       <Footer />
     </>
