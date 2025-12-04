@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
-import { HeaderRestaurant, Header as HeaderStyle, Nav, Title } from './styles'
+import { Header as HeaderStyle, Nav, Title } from './styles'
 import fundo from '../../assets/images/fundo.png'
-import italiana from '../../assets/images/italiana.png'
+
 import Logo from '../Logo'
+import Banner from '../Banner'
 
 type Props = {
   page: 'home' | 'trattoria'
@@ -13,9 +14,7 @@ const Header = ({ page }: Props) => {
     return (
       <HeaderStyle style={{ backgroundImage: `url(${fundo})` }}>
         <div className="container">
-          <Link to="/">
-            <Logo />
-          </Link>
+          <Logo />
           <Title>Viva experiências gastronômicas no conforto da sua casa</Title>
         </div>
       </HeaderStyle>
@@ -28,12 +27,12 @@ const Header = ({ page }: Props) => {
         <div className="container">
           <ul>
             <li>
-              <a href="">Restaurantes</a>
+              <Link to="/">
+                <a href="">Restaurantes</a>
+              </Link>
             </li>
             <li>
-              <Link to="/">
-                <Logo />
-              </Link>
+              <Logo />
             </li>
             <li>
               <a href="">0 produto(s) no carrinho</a>
@@ -41,14 +40,7 @@ const Header = ({ page }: Props) => {
           </ul>
         </div>
       </Nav>
-      <HeaderRestaurant style={{ backgroundImage: `url(${italiana})` }}>
-        <div>
-          <div className="container">
-            <p>Italiana</p>
-            <Title>La Dolce Vita Trattoria</Title>
-          </div>
-        </div>
-      </HeaderRestaurant>
+      <Banner />
     </HeaderStyle>
   )
 }

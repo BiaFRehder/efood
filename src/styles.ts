@@ -5,7 +5,8 @@ export const colors = {
   fundoBody: '#FFF8F2',
   bege: '#FFEBD9',
   branca: '#ffffff',
-  pretoOpaco: '#00000080'
+  pretoOpaco: '#00000080',
+  preto: '#000'
 }
 
 export const GlobalStyle = createGlobalStyle`

@@ -28,7 +28,6 @@ export const Title = styled.h1`
 export const Nav = styled.nav`
   width: 100%;
   align-content: center;
-  margin-bottom: 80px;
 
   ul {
     display: flex;
@@ -40,38 +39,6 @@ export const Nav = styled.nav`
       font-weight: bold;
       font-size: 18px;
       width: 200px;
-    }
-  }
-`
-
-export const HeaderRestaurant = styled.div`
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 280px;
-  color: ${colors.branca};
-  position: relative;
-
-  > div {
-    background-color: ${colors.pretoOpaco};
-    width: 100%;
-    height: 280px;
-  }
-
-  .container {
-    justify-items: left;
-    padding-top: 24px;
-
-    p {
-      font-size: 32px;
-      font-weight: lighter;
-    }
-
-    ${Title} {
-      text-align: left;
-      color: ${colors.branca};
-      font-size: 32px;
-      bottom: 32px;
     }
   }
 `
