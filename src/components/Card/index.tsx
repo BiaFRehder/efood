@@ -13,7 +13,7 @@ import Tag from '../Tag'
 import Button from '../Button'
 
 export type Props = {
-  type: string
+  variant: string
   image: string
   altImage: string
   rating: string
@@ -23,7 +23,7 @@ export type Props = {
 }
 
 const Card = ({
-  type,
+  variant,
   image,
   altImage,
   rating,
@@ -31,9 +31,9 @@ const Card = ({
   description,
   category
 }: Props) => {
-  if (type === 'restaurant') {
+  if (variant === 'restaurant') {
     return (
-      <CardStyle $type="restaurant">
+      <CardStyle $variant="restaurant">
         <CardImage src={image} alt={altImage} />
         <Tags>
           {category.map((tag) => (
@@ -56,7 +56,7 @@ const Card = ({
   }
 
   return (
-    <CardStyle $type="menu">
+    <CardStyle $variant="menu">
       <CardImage src={image} alt={altImage} />
       <CardContainer>
         <Title>{name}</Title>

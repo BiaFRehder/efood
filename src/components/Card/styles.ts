@@ -5,7 +5,7 @@ import { colors } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
 type Props = {
-  $type: 'restaurant' | 'menu'
+  $variant: 'restaurant' | 'menu'
 }
 
 export const Title = styled.h2`
@@ -15,7 +15,6 @@ export const Title = styled.h2`
 
 export const CardImage = styled.img`
   display: block;
-  height: 217px;
   top: -1px;
   left: -1px;
 `
@@ -43,38 +42,9 @@ export const CardContainer = styled.div`
   }
 `
 
-export const Card = styled.div<Props>`
-  background-color: ${(props) =>
-    props.$type === 'restaurant' ? colors.branca : colors.laranja};
-  color: ${(props) =>
-    props.$type === 'restaurant' ? colors.laranja : colors.bege};
-  position: relative;
-  margin-bottom: 48px;
-  padding: 8px;
-  border: 1px solid ${colors.laranja};
-
-  ${Title} {
-    font-size: ${(props) => (props.$type === 'restaurant' ? '18px' : '16px')};
-  }
-
-  ${CardImage} {
-    width: ${(props) =>
-      props.$type === 'restaurant' ? 'calc(100% + 2px)' : '100%'};
-    position: ${(props) =>
-      props.$type === 'restaurant' ? 'absolute' : 'static'};
-  }
-
-  ${CardContainer} {
-    margin-top: ${(props) => (props.$type === 'restaurant' ? '217px' : '0')};
-  }
-
-  ${ButtonContainer} {
-    background-color: ${(props) =>
-      props.$type === 'restaurant' ? colors.laranja : colors.bege};
-    color: ${(props) =>
-      props.$type === 'restaurant' ? colors.bege : colors.laranja};
-    width: ${(props) => (props.$type === 'restaurant' ? '' : '100%')};
-  }
+export const Description = styled.p`
+  font-size: 14px;
+  line-height: 22px;
 `
 
 export const Tags = styled.div`
@@ -85,8 +55,42 @@ export const Tags = styled.div`
   z-index: 1;
 `
 
-export const Description = styled.p`
-  font-size: 14px;
-  padding: 16px 0;
-  line-height: 22px;
+export const Card = styled.div<Props>`
+  background-color: ${(props) =>
+    props.$variant === 'restaurant' ? colors.branca : colors.laranja};
+  color: ${(props) =>
+    props.$variant === 'restaurant' ? colors.laranja : colors.bege};
+  position: relative;
+  padding: 8px;
+  border: 1px solid ${colors.laranja};
+
+  ${Title} {
+    font-size: ${(props) =>
+      props.$variant === 'restaurant' ? '18px' : '16px'};
+  }
+
+  ${CardImage} {
+    width: ${(props) =>
+      props.$variant === 'restaurant' ? 'calc(100% + 2px)' : '100%'};
+    position: ${(props) =>
+      props.$variant === 'restaurant' ? 'absolute' : 'static'};
+    height: ${(props) => (props.$variant === 'restaurant' ? '217px' : '167px')};
+  }
+
+  ${CardContainer} {
+    margin-top: ${(props) => (props.$variant === 'restaurant' ? '217px' : '0')};
+  }
+
+  ${Description} {
+    padding: ${(props) =>
+      props.$variant === 'restaurant' ? '16px 0' : '8px 0'};
+  }
+
+  ${ButtonContainer} {
+    background-color: ${(props) =>
+      props.$variant === 'restaurant' ? colors.laranja : colors.bege};
+    color: ${(props) =>
+      props.$variant === 'restaurant' ? colors.bege : colors.laranja};
+    width: ${(props) => (props.$variant === 'restaurant' ? '' : '100%')};
+  }
 `

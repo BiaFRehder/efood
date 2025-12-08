@@ -35,5 +35,9 @@ export const BannerContainer = styled.div`
     p {
       font-weight: lighter;
     }
+
+    h2 {
+      font-size: 32px;
+    }
   }
 `

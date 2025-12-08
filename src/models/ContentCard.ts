@@ -1,6 +1,6 @@
-class Restaurant {
+class ContentCard {
   id: number
-  type: string
+  variant: string
   image: string
   altImage: string
   name: string
@@ -10,7 +10,7 @@ class Restaurant {
 
   constructor(
     id: number,
-    type: string,
+    variant: string,
     image: string,
     altImage: string,
     name: string,
@@ -19,7 +19,7 @@ class Restaurant {
     description: string
   ) {
     this.id = id
-    this.type = type
+    this.variant = variant
     this.image = image
     this.altImage = altImage
     this.name = name
@@ -29,4 +29,4 @@ class Restaurant {
   }
 }
 
-export default Restaurant
+export default ContentCard

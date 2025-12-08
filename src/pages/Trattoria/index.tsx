@@ -1,14 +1,14 @@
-import Restaurant from '../../models/Restaurant'
+import ContentCard from '../../models/ContentCard'
 import CardList from '../../components/CardList'
 import Header from '../../components/Header'
 
 import pizza from '../../assets/images/pizza.png'
 import Footer from '../../components/Footer'
 
-const resturants: Restaurant[] = [
+const menu: ContentCard[] = [
   {
     id: 1,
-    type: 'menu',
+    variant: 'menu',
     image: pizza,
     altImage: 'Foto de comida japonesa',
     name: 'Pizza Marguerita',
@@ -19,7 +19,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 2,
-    type: 'menu',
+    variant: 'menu',
     image: pizza,
     altImage: 'Foto de comida japonesa',
     name: 'Pizza Marguerita',
@@ -30,7 +30,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 3,
-    type: 'menu',
+    variant: 'menu',
     image: pizza,
     altImage: 'Foto de comida japonesa',
     name: 'Pizza Marguerita',
@@ -41,7 +41,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 4,
-    type: 'menu',
+    variant: 'menu',
     image: pizza,
     altImage: 'Foto de comida japonesa',
     name: 'Pizza Marguerita',
@@ -52,7 +52,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 5,
-    type: 'menu',
+    variant: 'menu',
     image: pizza,
     altImage: 'Foto de comida japonesa',
     name: 'Pizza Marguerita',
@@ -63,7 +63,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 6,
-    type: 'menu',
+    variant: 'menu',
     image: pizza,
     altImage: 'Foto de comida japonesa',
     name: 'Pizza Marguerita',
@@ -78,7 +78,7 @@ const Home = () => {
   return (
     <>
       <Header page="trattoria" />
-      <CardList restaurants={resturants} />
+      <CardList cards={menu} variant="menu" />
       <Footer />
     </>
   )

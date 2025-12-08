@@ -1,4 +1,4 @@
-import Restaurant from '../../models/Restaurant'
+import ContentCard from '../../models/ContentCard'
 import CardList from '../../components/CardList'
 import Header from '../../components/Header'
 
@@ -6,10 +6,10 @@ import japonesa from '../../assets/images/japonesa.png'
 import italiana from '../../assets/images/italiana.png'
 import Footer from '../../components/Footer'
 
-const resturants: Restaurant[] = [
+const resturants: ContentCard[] = [
   {
     id: 1,
-    type: 'restaurant',
+    variant: 'restaurant',
     image: japonesa,
     altImage: 'Foto de comida japonesa',
     name: 'Hioki Sushi',
@@ -20,7 +20,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 2,
-    type: 'restaurant',
+    variant: 'restaurant',
     image: italiana,
     altImage: 'Foto de comida italiana',
     name: 'La Dolce Vita Trattoria',
@@ -31,7 +31,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 3,
-    type: 'restaurant',
+    variant: 'restaurant',
     image: japonesa,
     altImage: 'Foto de comida japonesa',
     name: 'Hioki Sushi',
@@ -42,7 +42,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 4,
-    type: 'restaurant',
+    variant: 'restaurant',
     image: italiana,
     altImage: 'Foto de comida italiana',
     name: 'La Dolce Vita Trattoria',
@@ -53,7 +53,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 5,
-    type: 'restaurant',
+    variant: 'restaurant',
     image: japonesa,
     altImage: 'Foto de comida japonesa',
     name: 'Hioki Sushi',
@@ -64,7 +64,7 @@ const resturants: Restaurant[] = [
   },
   {
     id: 6,
-    type: 'restaurant',
+    variant: 'restaurant',
     image: italiana,
     altImage: 'Foto de comida italiana',
     name: 'La Dolce Vita Trattoria',
@@ -79,7 +79,7 @@ const Home = () => {
   return (
     <>
       <Header page="home" />
-      <CardList restaurants={resturants} />
+      <CardList cards={resturants} variant="restaurant" />
       <Footer />
     </>
   )
