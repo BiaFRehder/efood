@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { colors, TextDescription, Title } from '../../styles'
 import { ButtonContainer } from '../Button/styles'
 
 export const Card = styled.div`
@@ -61,15 +61,11 @@ export const Infos = styled.div`
   }
 `
 
-export const Title = styled.h2`
-  font-weight: bold;
-  margin-top: 8px;
+export const Name = styled(Title)`
   font-size: 18px;
 `
 
-export const Description = styled.p`
-  font-size: 14px;
-  line-height: 22px;
+export const Description = styled(TextDescription)`
   padding: 16px 0;
 `
 

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import star from '../../assets/images/estrela.png'
 import Tag from '../Tag'
-import { Button, Card, Description, Image, Infos, Tags, Title } from './styles'
+import { Button, Card, Description, Image, Infos, Tags, Name } from './styles'
 
 export type Props = {
   capa: string
@@ -27,7 +27,7 @@ const RestaurantCard = ({
         ))}
       </Tags>
       <Infos>
-        <Title>{titulo}</Title>
+        <Name>{titulo}</Name>
         <div>
           <p>{avaliacao}</p>
           <img src={star} alt="" />

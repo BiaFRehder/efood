@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { ButtonContainer } from '../Button/styles'
-import { colors } from '../../styles'
+import { colors, TextDescription, Title } from '../../styles'
 
 export const Card = styled.div`
   background-color: ${colors.laranja};
@@ -15,16 +15,12 @@ export const Picture = styled.img`
   height: 167px;
 `
 
-export const Name = styled.h3`
-  font-weight: bold;
-  margin-top: 8px;
+export const Name = styled(Title)`
   font-size: 16px;
 `
 
-export const Description = styled.p`
+export const Description = styled(TextDescription)`
   padding: 8px 0;
-  font-size: 14px;
-  line-height: 22px;
 `
 
 export const Button = styled(ButtonContainer)`

@@ -33,3 +33,13 @@ export const GlobalStyle = createGlobalStyle`
 export const CardContainer = styled.div`
   padding: 80px 0;
 `
+
+export const Title = styled.h2`
+  font-weight: bold;
+  margin-top: 8px;
+`
+
+export const TextDescription = styled.p`
+  font-size: 14px;
+  line-height: 22px;
+`
