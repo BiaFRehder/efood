@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const colors = {
   laranja: '#E66767',
@@ -28,4 +28,8 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     margin: 0 auto;
   }
+`
+
+export const CardContainer = styled.div`
+  padding: 80px 0;
 `

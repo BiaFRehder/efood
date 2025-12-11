@@ -6,7 +6,7 @@ import Logo from '../Logo'
 import Banner from '../Banner'
 
 type Props = {
-  page: 'home' | 'trattoria'
+  page: 'home' | 'restaurants'
 }
 
 const Header = ({ page }: Props) => {
