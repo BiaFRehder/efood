@@ -1,10 +1,11 @@
 import ContentCard from '../../models/ContentCard'
-import Header from '../../components/Header'
 
 import japonesa from '../../assets/images/japonesa.png'
 import italiana from '../../assets/images/italiana.png'
+
 import Footer from '../../components/Footer'
 import RestaurantList from '../../components/RestaurantList'
+import HeaderHome from '../../components/HeaderHome'
 
 const resturants: ContentCard[] = [
   {
@@ -78,7 +79,7 @@ const resturants: ContentCard[] = [
 const Home = () => {
   return (
     <>
-      <Header page="home" />
+      <HeaderHome />
       <RestaurantList cards={resturants} />
       <Footer />
     </>

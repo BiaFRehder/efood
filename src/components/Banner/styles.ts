@@ -8,7 +8,7 @@ export const BannerContainer = styled.div`
   color: ${colors.branca};
   font-size: 32px;
   padding: 24px 0 32px;
-  margin-top: 80px;
+  margin-top: 64px;
 
   background-size: cover;
   background-repeat: no-repeat;
