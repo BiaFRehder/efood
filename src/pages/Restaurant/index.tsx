@@ -1,3 +1,4 @@
+import { useParams } from 'react-router-dom'
 import ContentCard from '../../models/ContentCard'
 
 import pizza from '../../assets/images/pizza.png'
@@ -76,6 +77,8 @@ const menu: ContentCard[] = [
 ]
 
 const Restaurant = () => {
+  const { id } = useParams()
+
   return (
     <>
       <HeaderRestaurant />

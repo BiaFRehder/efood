@@ -12,7 +12,7 @@ const MenuCard = ({ foto, nome, descricao }: Props) => {
       <Picture src={foto} alt={nome} />
       <Name>{nome}</Name>
       <Description>{descricao}</Description>
-      <Button>Adicionar ao carrinho</Button>
+      <Button>Mais detalhes</Button>
     </Card>
   )
 }
