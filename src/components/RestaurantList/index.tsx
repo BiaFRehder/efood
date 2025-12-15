@@ -1,11 +1,11 @@
-import ContentCard from '../../models/ContentCard'
 import RestaurantCard from '../RestaurantCard'
 
 import { CardContainer } from '../../styles'
 import { List } from './styles'
+import { Restaurant } from '../../pages/Home'
 
 type Props = {
-  cards: ContentCard[]
+  cards: Restaurant[]
 }
 
 const RestaurantList = ({ cards }: Props) => {
@@ -13,14 +13,15 @@ const RestaurantList = ({ cards }: Props) => {
     <CardContainer>
       <div className="container">
         <List>
-          {cards.map((ContentCard) => (
+          {cards.map((restaurant) => (
             <RestaurantCard
-              key={ContentCard.id}
-              capa={ContentCard.image}
-              avaliacao={ContentCard.rating}
-              titulo={ContentCard.name}
-              descricao={ContentCard.description}
-              tipo={ContentCard.category}
+              key={restaurant.id}
+              id={restaurant.id}
+              capa={restaurant.capa}
+              avaliacao={restaurant.avaliacao}
+              titulo={restaurant.titulo}
+              descricao={restaurant.descricao}
+              tipo={restaurant.tipo}
             />
           ))}
         </List>

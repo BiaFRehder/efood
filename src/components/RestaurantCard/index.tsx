@@ -4,14 +4,16 @@ import Tag from '../Tag'
 import { Button, Card, Description, Image, Infos, Tags, Name } from './styles'
 
 export type Props = {
+  id: number
   capa: string
   avaliacao: string
   titulo: string
   descricao: string
-  tipo: string[]
+  tipo: string
 }
 
 const RestaurantCard = ({
+  id,
   capa,
   avaliacao,
   titulo,
@@ -22,9 +24,7 @@ const RestaurantCard = ({
     <Card>
       <Image src={capa} alt={`Restaurante ${titulo}`} />
       <Tags>
-        {tipo.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
-        ))}
+        <Tag>{tipo}</Tag>
       </Tags>
       <Infos>
         <Name>{titulo}</Name>
@@ -33,7 +33,7 @@ const RestaurantCard = ({
           <img src={star} alt="" />
         </div>
         <Description>{descricao}</Description>
-        <Link to="/restaurantes/:id">
+        <Link to={`/restaurantes/${id}`}>
           <Button>Saiba mais</Button>
         </Link>
       </Infos>

@@ -1,21 +1,27 @@
 import { Link } from 'react-router-dom'
 import { Header, Nav } from './styles'
 import fundo from '../../assets/images/fundo.png'
-import italiana from '../../assets/images/italiana.png'
 
 import Logo from '../Logo'
 import Banner from '../Banner'
+import { Restaurant } from '../../pages/Home'
 
-const HeaderRestaurant = () => {
+type Props = {
+  banner: Restaurant
+}
+
+const HeaderRestaurant = ({ banner }: Props) => {
+  const capitalize = (text?: string) => {
+    return text ? text[0].toUpperCase() + text.slice(1) : ''
+  }
+
   return (
     <Header style={{ backgroundImage: `url(${fundo})` }}>
       <Nav>
         <div className="container">
           <ul>
             <li>
-              <Link to="/">
-                <a href="">Restaurantes</a>
-              </Link>
+              <Link to="/">Restaurantes</Link>
             </li>
             <li>
               <Logo />
@@ -27,9 +33,9 @@ const HeaderRestaurant = () => {
         </div>
       </Nav>
       <Banner
-        capa={italiana}
-        tipo="Italiana"
-        titulo="La Dolce Vita Trattoria"
+        capa={banner.capa}
+        tipo={capitalize(banner.tipo)}
+        titulo={banner.titulo}
       />
     </Header>
   )

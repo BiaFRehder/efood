@@ -1,4 +1,3 @@
-import ContentCard from '../../models/ContentCard'
 import MenuCard from '../MenuCard'
 
 import { CardContainer } from '../../styles'
@@ -13,25 +12,25 @@ import {
   Modal
 } from './styles'
 
-import pizza from '../../assets/images/pizza.png'
 import fechar from '../../assets/images/close.png'
+import { Restaurant } from '../../pages/Home'
 
-type Props = {
-  cards: ContentCard[]
+export type Props = {
+  cards: Restaurant['cardapio'][]
 }
 
-const MenuList = ({ cards }: Props) => {
+const MenuList = ({ cards = [] }: Props) => {
   return (
     <>
       <CardContainer>
         <div className="container">
           <List>
-            {cards.map((ContentCard) => (
+            {cards.map((item) => (
               <MenuCard
-                key={ContentCard.id}
-                foto={ContentCard.image}
-                nome={ContentCard.name}
-                descricao={ContentCard.description}
+                key={item.id}
+                foto={item.foto}
+                nome={item.nome}
+                descricao={item.descricao}
               />
             ))}
           </List>
@@ -39,26 +38,21 @@ const MenuList = ({ cards }: Props) => {
       </CardContainer>
       <Modal>
         <ModalContent className="container">
-          <Close src={fechar} alt="" />
-          <Image src={pizza} alt="" />
-          <div>
-            <Name>Pizza Marguerita</Name>
-            <Text>
-              A pizza Margherita é uma pizza clássica da culinária italiana,
-              reconhecida por sua simplicidade e sabor inigualável. Ela é feita
-              com uma base de massa fina e crocante, coberta com molho de tomate
-              fresco, queijo mussarela de alta qualidade, manjericão fresco e
-              azeite de oliva extra-virgem. A combinação de sabores é perfeita,
-              com o molho de tomate suculento e ligeiramente ácido, o queijo
-              derretido e cremoso e as folhas de manjericão frescas, que
-              adicionam um toque de sabor herbáceo. É uma pizza simples, mas
-              deliciosa, que agrada a todos os paladares e é uma ótima opção
-              para qualquer ocasião.
-              <br />
-              <span>Serve: de 2 a 3 pessoas</span>
-            </Text>
-            <Button>Adicionar ao carrinho - R$ 60,90</Button>
-          </div>
+          <Close src={fechar} alt="Ícone de fechar" />
+          {cards.map((item) => (
+            <>
+              <Image src={item.foto} alt={`Foto do prato ${item.nome}`} />
+              <div>
+                <Name>{item.nome}</Name>
+                <Text>
+                  {item.descricao}
+                  <br />
+                  <span>{`Serve: de ${item.porcao}`}</span>
+                </Text>
+                <Button>{`Adicionar ao carrinho - R$ ${item.preco}`}</Button>
+              </div>
+            </>
+          ))}
         </ModalContent>
         <div className="overlay"></div>
       </Modal>
