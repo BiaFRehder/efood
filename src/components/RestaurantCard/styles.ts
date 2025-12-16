@@ -17,6 +17,7 @@ export const Image = styled.img`
   width: calc(100% + 2px);
   position: absolute;
   height: 217px;
+  object-fit: cover;
 `
 
 export const Tags = styled.div`

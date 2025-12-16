@@ -13,6 +13,7 @@ export const Picture = styled.img`
   width: 100%;
   position: static;
   height: 167px;
+  object-fit: cover;
 `
 
 export const Name = styled(Title)`

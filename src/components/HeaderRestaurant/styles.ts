@@ -3,6 +3,8 @@ import { colors } from '../../styles'
 
 export const Header = styled.header`
   padding-top: 64px;
+  background-size: cover;
+  background-repeat: no-repeat;
 `
 
 export const Nav = styled.nav`
